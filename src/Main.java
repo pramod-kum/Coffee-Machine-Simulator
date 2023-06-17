@@ -30,9 +30,9 @@ public class Main {
                         case 1:System.out.println(cofeeMachineObj.espressoPurchase(4,250,0,16));
                         break;
 
-                        case 2:System.out.println(cofeeMachineObj.espressoPurchase(7,350,75,20));
+                        case 2:System.out.println(cofeeMachineObj.lattePurchase(7,350,75,20));
                         break;
-                        case 3:System.out.println(cofeeMachineObj.espressoPurchase(6,200,100,12));
+                        case 3:System.out.println(cofeeMachineObj.CappuccinoPurchase(6,200,100,12));
                         break;
                         default:System.out.println("Wrong input...Sorry!!!");
                     }

@@ -1,12 +1,12 @@
 public class CoffeeMachine {
 
 
-    long storeAmount=0;
-    long storeWater=0;
-    long storeMilk=0;
-    long storeBeans=0;
+    private long storeAmount=0;
+    private long storeWater=0;
+    private long storeMilk=0;
+    private long storeBeans=0;
 
-    long totalCoffeeSell=0;
+    private long totalCoffeeSell=0;
 
     private int water=0;
     private int milk=0;
@@ -32,6 +32,13 @@ public class CoffeeMachine {
    }
 
    public String espressoPurchase(int prise , int water,int milk, int beans){
+
+       if(this.water==0 || this.beans==0){
+           System.out.println("Opp!!! Not all items are available!!");
+           System.out.println("water: "+this.water);
+           System.out.println("beans: "+this.beans);
+           return "Sorry!!!";
+       }
        storeAmount+=prise;
        this.water-=water;
        this.milk-=milk;
@@ -45,6 +52,13 @@ public class CoffeeMachine {
    }
 
     public String lattePurchase(int prise , int water,int milk, int beans){
+        if(this.water==0 || milk==0 || this.beans==0){
+            System.out.println("Opp!!! Not all items are available!!");
+            System.out.println("water: "+this.water);
+            System.out.println("milk: "+this.milk);
+            System.out.println("beans: "+this.beans);
+            return "Sorry!!!";
+        }
         storeAmount+=prise;
         this.water-=water;
         this.milk-=milk;
@@ -58,6 +72,13 @@ public class CoffeeMachine {
     }
 
     public String CappuccinoPurchase(int prise , int water,int milk, int beans){
+        if(this.water==0 || milk==0 || this.beans==0){
+            System.out.println("Opp!!! Not all items are available!!");
+            System.out.println("water: "+this.water);
+            System.out.println("milk: "+this.milk);
+            System.out.println("beans: "+this.beans);
+            return "Sorry!!!";
+        }
         storeAmount+=prise;
         this.water-=water;
         this.milk-=milk;
